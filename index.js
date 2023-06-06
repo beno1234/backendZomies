@@ -3,8 +3,9 @@ const app = express();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
-const port = 5000;
+const port = process.env.PORT || 5000;
 const multer = require("multer");
+require("dotenv").config();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
