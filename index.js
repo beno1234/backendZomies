@@ -74,13 +74,15 @@ app.post("/send-email", upload.single("curriculoFile"), async (req, res) => {
       curriculoFile.originalname
     );
 
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.status(200).json({ msg: "E-mail enviado com sucesso" });
   } catch (error) {
     console.error("Erro ao enviar e-mail:", error);
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.status(500).json({ error: "Erro ao enviar e-mail" });
   }
 });
 
 app.listen(port, () => {
-  console.log("Servidor rodando na porta 5000");
+  console.log(`Servidor rodando na porta ${port}`);
 });
