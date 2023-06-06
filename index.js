@@ -84,5 +84,5 @@ app.post("/send-email", upload.single("curriculoFile"), async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Servidor rodando na porta ${port}`);
+  console.info(`aplicacao rodando ${port}`);
 });
