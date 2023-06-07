@@ -36,7 +36,7 @@ async function enviarEmailBackend(
     // Corpo do e-mail
     let info = await transporter.sendMail({
       from: "contas@bmouseproductions.com",
-      to: ["contas@bmouse"],
+      to: ["contas@bmouseproductions.com"],
       subject: "Nova Ilustração",
       html: `<p>Nome: ${nome}</p>
                <p>Telefone: ${telefone}</p>
